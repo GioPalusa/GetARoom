@@ -1,0 +1,34 @@
+<ion-view title="start" hide-nav-bar="true" hide-back-button="true" nav-transition="none" ng-init="today()">
+  <ion-content padding="true" id="start" class="manual-ios-statusbar-padding" scroll="false">
+    <div class="spacer" style="width: 300px; height: 47px;"></div>
+    <h1>Get a room!</h1>
+    <div style="text-align:center;" class="show-list-numbers-and-dots">
+      <h4>Stockholm bed & breakfast hotel </h4>
+    </div>
+    <form name="startForm" class="list">
+      <label class="item item-input" name="checkin">
+        <span class="input-label">Check in</span>
+        <input type="date" 
+               min="{{date.today}}"
+               max="{{date.max}}"
+               ng-required="true"
+               ng-model="reservation.checkin"
+               required>
+      </label>
+      <label class="item item-input" name="checkout">
+        <span class="input-label">Check out</span>
+        <input type="date"
+               ng-click="selectedDay(reservation.checkin)" 
+               min="{{date.tomorrow}}"
+               max="{{date.tomorrowMax}}"
+               ng-model="reservation.checkout"
+               ng-disabled="reservation.checkin == '' "
+               required> <!--Gör fältet icke klickbart om checkin är tomt-->
+      </label>
+      <a ui-sref="tabsController.getARoom" 
+         class="button button-energized  button-block icon-left ion-location"
+         ng-click="calculateDays(reservation.checkin, reservation.checkout)"
+         ng-disabled="startForm.$invalid">Find a room now!</a>
+    </form>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,80 @@
+<ion-view title="Confirmation">
+  <ion-content padding="true" class="has-header">
+    <ion-list>
+      <ion-item class="item-thumbnail-left">
+        <img ng-src="img/{{reservation.roomObject.images.image1}}" alt="">
+        <h2>{{reservation.roomObject.hotelName}}</h2>
+        <p>{{reservation.roomObject.beds}}</p>
+        <p>{{reservation.roomObject.price}} {{reservation.roomObject.currency}} per night * {{reservation.noOfDays}}
+          nights
+        </p>
+        <p>Total: <strong>{{reservation.price}} {{reservation.roomObject.currency}}</strong></p>
+      </ion-item>
+      <ng-form name="ConfirmationForm" class="animate-show-hide" ng-hide="reservation.hideForm">
+        <h4>How many are you?</h4>
+        <div class="item range"> Adults: {{reservation.adults}}
+          <i class="icon ion-ios-person"></i>
+          <input type="range" min="1" max="3" ng-model="reservation.adults">
+          <i class="icon ion-ios-people"></i>
+        </div>
+        <div class="item range"> Children: {{reservation.children}}
+          <i class="icon ion-ios-person"></i>
+          <input type="range" min="1" max="4" ng-model="reservation.children">
+          <i class="icon ion-ios-people"></i>
+        </div>
+        <a ng-click="showPeopleAlert()">Why can't i pick more people?</a>
+        <br><br>
+
+        <h4>Any special needs?</h4>
+        <ion-toggle class="item-icon-left" ng-model="reservation.wheelchair" 
+                    toggle-class="toggle-calm"><i class="icon ion-android-hand ">
+                    </i>Wheelchair access</ion-toggle>
+        <ion-toggle class="item-icon-left" ng-model="reservation.pets" 
+                    toggle-class="toggle-calm"><i class="icon ion-ios-paw ">
+                    </i>Bringing pets</ion-toggle>
+        <div id="ConfirmForm">
+          <br>
+
+          <h4>Tell us some things about you</h4>
+          <label class="item item-input">
+          <input class="col" type="text" ng-model="reservation.firstName" 
+                 placeholder="First name" ng-minlength="2" ng-maxlength="15" required>
+          <input class="col" type="text" ng-model="reservation.lastName" 
+                 placeholder="Family name" ng-minlength="2" ng-maxlength="15" required>
+        </label>
+          <label class="item item-input">
+          <input type="text" placeholder="Address" ng-model="reservation.address" 
+                 ng-minlength="1" ng-maxlength="30" required>
+        </label>
+          <label class="item item-input">
+          <input class="col" type="text" ng-model="reservation.postal" 
+                 placeholder="zip code" ng-minlength="3" ng-maxlength="30" required>
+          <input class="col" type="text" ng-model="reservation.city" 
+                 placeholder="city" ng-minlength="2" ng-maxlength="30" required>
+        </label>
+          <label class="item item-input">
+          <input type="tel" ng-model="reservation.phone" placeholder="Phone number" 
+                 minlength="5" maxlength="15" required>
+        </label>
+          <label class="item item-input">
+          <input type="email" ng-model="reservation.email" placeholder="E-mail" 
+                 minlength="5" required>
+        </label>
+        </div>
+        <button class="button button-balanced  button-block icon-left ion-android-checkmark-circle" ng-click="showPopup()" ng-disabled="ConfirmationForm.$invalid">
+          Confirm reservation
+        </button>
+      </ng-form>
+      <div ng-show="reservation.hideForm" class="finished">
+        <img ng-src="img/checked.svg">
+        <h2>Thank you {{reservation.firstName}}!</h2>
+        <p>We'll see you {{reservation.checkinString}}</p>
+        <p>A confirmation has been sent to {{reservation.email}}</p>
+        <button class="button button-energized buttonBlack button-block icon-left" 
+                ui-sref="start" ng-click="changeHideForm()">
+          Back to start
+        </button>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,82 @@
+[
+  {
+    "roomID": "room1",
+    "roomType":"Double room",
+    "roomName":"Lyx delux",
+    "stars": 4,
+    "price": 1100,
+    "beds": "2 beds",
+    "currency": "SEK",
+    "url": "http://www.palusa.se",
+    "info":" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum incidunt, accusantium repellat commodi repudiandae hic velit earum quis impedit iusto, pariatur ipsum sint a vero corrupti adipisci, architecto aut modi.",
+    "images": {
+        "image1": "rum1_1.jpg",
+        "image2": "rum1_2.jpg",
+        "image3": "rum1_3.jpg"
+    }
+  },
+  {
+    "roomID": "room2",
+    "roomType":"Double room",
+    "roomName":"simpelt rum",
+    "stars": 2,
+    "price": 540,
+    "beds": "1 bed",
+    "currency": "SEK",
+    "url": "http://www.palusa.se",
+    "info":" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum incidunt, accusantium repellat commodi repudiandae hic velit earum quis impedit iusto, pariatur ipsum sint a vero corrupti adipisci, architecto aut modi.",
+    "images": {
+        "image1": "rum2_1.jpg",
+        "image2": "rum2_2.jpg",
+        "image3": "rum2_3.jpg"
+    }
+  },
+  {
+    "roomID": "room3",
+    "roomType":"Single bed",
+    "roomName":"Single and ready to mingle",
+    "stars": 4,
+    "price": 1695,
+    "beds": "5 beds",
+    "currency": "SEK",
+    "url": "http://www.palusa.se",
+    "info":" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum incidunt, accusantium repellat commodi repudiandae hic velit earum quis impedit iusto, pariatur ipsum sint a vero corrupti adipisci, architecto aut modi.",
+    "images": {
+        "image1": "rum3_1.jpeg",
+        "image2": "rum3_2.jpeg",
+        "image3": "rum3_3.jpeg"
+    }
+  },
+  {
+    "roomID": "room4",
+    "roomType":"Familjerum",
+    "roomName":"Family fun",
+    "stars": 4,
+    "price": 3200,
+    "beds": "5 beds",
+    "currency": "SEK",
+    "url": "http://www.palusa.se",
+    "info":" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum incidunt, accusantium repellat commodi repudiandae hic velit earum quis impedit iusto, pariatur ipsum sint a vero corrupti adipisci, architecto aut modi.",
+    "images": {
+        "image1": "rum4_1.jpg",
+        "image2": "rum4_2.jpeg",
+        "image3": "rum4_3.jpeg"
+    }
+  },
+  {
+    "roomID": "room5",
+    "roomType":"Single bed",
+    "roomName":"Single and fab",
+    "stars": 4,
+    "price": 2100,
+    "beds": "1 bed",
+    "currency": "SEK",
+    "url": "http://www.palusa.se",
+    "info":" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum incidunt, accusantium repellat commodi repudiandae hic velit earum quis impedit iusto, pariatur ipsum sint a vero corrupti adipisci, architecto aut modi.",
+    "images": {
+        "image1": "rum5_1.jpeg",
+        "image2": "rum5_2.jpeg",
+        "image3": "rum5_3.jpeg"
+    }
+  }
+]
