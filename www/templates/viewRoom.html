@@ -1,11 +1,11 @@
 <ion-view title="View room" id="ViewRoom">
   <ion-content padding="true" class="has-header">
     <ion-item ng-repeat="room in room | filter : {roomID: roomId}" ng-init="totalPrice(room)">
-      <ion-slides disable-side-menu-drag="" options="{'loop': false}" slider="slider1" delegate-handle="slider1"
+      <ion-slides disable-side-menu-drag="" options="{'loop': false}" slider="data.slider"
         style="width:100%;height:200px;">
-        <ion-slide-page id="slide1" style="background:url(&quot; ../img/{{room.images.image1}} &quot;) no-repeat center;background-size:cover;"></ion-slide-page>
-        <ion-slide-page id="slide2" style="background:url(&quot; ../img/{{room.images.image2}} &quot;) no-repeat center;background-size:cover;"></ion-slide-page>
-        <ion-slide-page id="slide3" style="background:url(&quot; ../img/{{room.images.image3}} &quot;) no-repeat center;background-size:cover;"></ion-slide-page>
+        <ion-slide-page id="slide1"> <img class="slidebg" ng-src="img/{{room.images.image1}}"> </ion-slide-page>
+        <ion-slide-page id="slide2"> <img class="slidebg" ng-src="img/{{room.images.image2}}"> </ion-slide-page>
+        <ion-slide-page id="slide3"> <img class="slidebg" ng-src="img/{{room.images.image3}}"> </ion-slide-page>
       </ion-slides>
         </div>
       </div>

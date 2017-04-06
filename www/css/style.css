@@ -63,3 +63,13 @@
 .buttonBlack {
   color: black;
 }
+
+.slides {
+  width:100%;
+  height:200px;
+}
+
+.slidebg {
+  background-size:cover;
+  width: 100%;
+}
